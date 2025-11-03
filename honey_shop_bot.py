@@ -11,8 +11,9 @@ from telebot import types
 import re
 
 # ----------------------- Configuration -----------------------
-BOT_TOKEN = 'YOUR_BOT_TOKEN'  # Will be replaced in deployment
-ADMIN_ID = 123456789         # Your Telegram ID
+import os
+BOT_TOKEN = os.getenv('BOT_TOKEN')
+ADMIN_ID = int(os.getenv('ADMIN_ID', '0'))
 SHOP_NAME = "HoneyShop"
 CURRENCY = "USD"
 BANK_CARD = '1234-5678-9012-3456'
