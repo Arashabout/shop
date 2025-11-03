@@ -12,8 +12,13 @@ import re
 
 # ----------------------- Configuration -----------------------
 import os
-BOT_TOKEN = os.getenv('BOT_TOKEN')
-ADMIN_ID = int(os.getenv('ADMIN_ID', '0'))
+import os  # ← حتماً اضافه کن
+
+BOT_TOKEN = os.getenv('8456068523:AAG1PHrP0DLSFSRhum7RqssdHe0ZVNCzW-w')
+if not BOT_TOKEN or ':' not in BOT_TOKEN:
+    raise ValueError("BOT_TOKEN is missing or invalid! Check Render Environment Variables.")
+
+ADMIN_ID = int(os.getenv('98707870', '0'))
 SHOP_NAME = "HoneyShop"
 CURRENCY = "USD"
 BANK_CARD = '1234-5678-9012-3456'
